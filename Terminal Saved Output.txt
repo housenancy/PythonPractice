@@ -1,0 +1,145 @@
+Last login: Tue Jul 16 09:07:57 on ttys002
+nancyhouse@Nancys-Air ~ % ipython
+Python 3.11.4 (v3.11.4:d2340ef257, Jun  6 2023, 19:15:51) [Clang 13.0.0 (clang-1300.0.29.30)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 8.26.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: def any7(nums):
+   ...:    ...:     """Are any of these numbers a 7? (True/False)"""
+   ...:    ...:
+   ...:    ...:     # YOUR CODE HERE
+   ...:    ...:     for num in nums:
+   ...:    ...:         if num == 7:
+   ...:    ...:             return True
+   ...:    ...:
+   ...:    ...:     return False
+   ...:    ...:
+   ...:    ...:
+   ...:    ...: print("should be true", any7([1, 2, 7, 4, 5]))
+   ...:    ...: print("should be false", any7([1, 2, 4, 5]))
+   ...:    ...:
+   ...: 
+should be true True
+should be false False
+
+   ...:     if unit_in != "f" and unit_in != "c":
+   ...:         return f"Invalid unit {unit_in}"
+   ...: 
+   ...:     if unit_out != "f" and unit_out != "c":
+   ...:         return f"Invalid unit {unit_out}"
+   ...: 
+   ...:     if unit_in == "f" and unit_out == "c":
+   ...:         temp = (temp - 32) / 9 * 5
+   ...: 
+   ...:     if unit_in == "c" and unit_out == "f":
+   ...:         temp = (temp * 5 / 9) + 32
+   ...: 
+   ...:     return temp
+   ...: 
+   ...: 
+   ...: print("c", "f", 0, convert_temp("c", "f", 0), "should be 32.0")
+   ...: print("f", "c", 212, convert_temp("f", "c", 212), "should be 100.0")
+   ...: print("z", "f", 32, convert_temp("z", "f", 32), "should be Invalid unit 
+   ...: z")
+   ...: print("c", "z", 32, convert_temp("c", "z", 32), "should be Invalid unit 
+   ...: z")
+   ...: print("f", "f", 75.5, convert_temp("f", "f", 75.5), "should be 75.5")
+   ...: 
+   ...: 
+c f 0 32.0 should be 32.0
+f c 212 100.0 should be 100.0
+z f 32 Invalid unit z should be Invalid unit z
+c z 32 Invalid unit z should be Invalid unit z
+f f 75.5 75.5 should be 75.5
+
+In [3]: def count_up(start, stop):
+   ...:     """Print all numbers from start up to and including stop.
+   ...: 
+   ...:     For example:
+   ...: 
+   ...:         count_up(5, 7)
+   ...: 
+   ...:    should print:
+   ...: 
+   ...:         5
+   ...:         6
+   ...:         7
+   ...:     """
+   ...: 
+   ...:     # YOUR CODE HERE
+   ...:     while start <= stop:
+   ...:         print(start)
+   ...:         start = start + 1
+   ...: 
+   ...: 
+   ...: count_up(5, 7)
+   ...: 
+5
+6
+7
+
+   ...:     """Print numbers inside range.
+   ...: 
+   ...:     - nums: list of numbers
+   ...:     - lowest: lowest number to print
+   ...:     - highest: highest number to print
+   ...: 
+   ...:     For example:
+   ...: 
+   ...:       in_range([10, 20, 30, 40], 15, 30)
+   ...: 
+   ...:     should print:
+   ...: 
+   ...:       20 fits
+   ...:       30 fits
+   ...:     """
+   ...: 
+   ...:     # YOUR CODE HERE
+   ...:     for num in nums:
+   ...:         if num >= lowest and num <= highest:
+   ...:             print(f"{num}fits")
+   ...: 
+   ...: 
+   ...: in_range([10, 20, 30, 40, 50], 15, 30)
+   ...: 
+20fits
+30fits
+
+In [5]: total = 0
+   ...: 
+   ...:     for num in nums:
+   ...:         total = total + num
+   ...: 
+   ...:     return total
+  Cell In[5], line 3
+    for num in nums:
+    ^
+IndentationError: unexpected indent
+
+
+In [6]: def sum_nums(nums):
+   ...:     """Given list of numbers, return sum of those numbers.
+   ...: 
+   ...:     For example:
+   ...:       sum_nums([1, 2, 3, 4])
+   ...: 
+   ...:     Should return (not print):
+   ...:       10
+   ...:     """
+   ...: 
+   ...:     # Python has a built-in function `sum()` for this, but we don't
+   ...:     # want you to use it. Please write this by hand.
+   ...: 
+   ...:     total = 0
+   ...: 
+   ...:     for num in nums:
+   ...:         total = total + num
+   ...: 
+   ...:     return total
+   ...: 
+   ...: 
+   ...: print("sum_nums returned", sum_nums([1, 2, 3, 4]))
+   ...: 
+sum_nums returned 10
+
+In [7]: 
